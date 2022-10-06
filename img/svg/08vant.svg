@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#D08634;stroke-width:2;stroke-opacity:0.1072;}
+	.st1{fill:url(#SVGID_1_);}
+</style>
+<title>icon5 copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-2_1_">
+	<g id="Artboard-Copy_1_" transform="translate(-1001.000000, -1915.000000)">
+		<g id="Group-2_1_" transform="translate(120.000000, 1575.000000)">
+			<g id="Group-3-Copy_1_" transform="translate(630.000000, 308.000000)">
+				<g id="icon5-copy_1_" transform="translate(251.000000, 32.000000)">
+					<circle class="st0" cx="34" cy="34" r="33"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.3" y1="34" x2="50.7" y2="34">
+	<stop  offset="0" style="stop-color:#FF7533"/>
+	<stop  offset="1" style="stop-color:#A54111"/>
+</linearGradient>
+<path class="st1" d="M50.4,26.6c-0.2-0.2-0.5-0.3-0.7-0.3H37.9V22c0-0.6-0.5-1-1-1H18.3c-0.6,0-1,0.5-1,1v14.3c0,0.6,0.5,1,1,1h2.4
+	v3.3c0,0.6,0.5,1,1,1c0.2,0,0.5-0.1,0.7-0.2l4.9-4.1h2.8v4.3c0,0.6,0.5,1,1,1h9.5l4.9,4.1c0.4,0.4,1.1,0.3,1.5-0.1
+	c0.2-0.2,0.2-0.4,0.2-0.7v-3.3h2.4c0.6,0,1-0.5,1-1V27.3C50.7,27,50.6,26.8,50.4,26.6z M27,35.3c-0.2,0-0.5,0.1-0.7,0.2l-3.5,2.9
+	v-2.1c0-0.6-0.5-1-1-1h-2.4V23.1h16.4v12.2H27z M48.6,40.6h-2.4c-0.6,0-1,0.5-1,1v2.1l-3.5-2.9c-0.2-0.2-0.4-0.2-0.7-0.2h-8.9v-3.2
+	h4.7c0.6,0,1-0.5,1-1v-0.6h5.2c0.6,0,1-0.5,1-1c0-0.6-0.5-1-1-1h-5.2v-5.3h10.7V40.6z"/>
+</svg>

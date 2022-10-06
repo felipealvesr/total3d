@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Total3D . This is reality</title>
+    <meta content="Blocos 3D, 3dsMax, Arquitetura, Engenharia, Designer, arquitetura de inteirior" name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="facebook-domain-verification" content="52hywu1jpd7tiv17wj7z3d5f14wvkt" />
+    <link href="./min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/style.css"> <!-- Resource style -->
+    <!--<script src="./js/jquery-2.1.1.js"></script>-->
+    <!--<script src="./js/jquery.mobile.custom.min.js"></script>--> <!-- Resource jQuery -->
+    <!--<script src="./js/main.js"></script> --> <!-- Resource jQuery -->
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"type="text/javascript"></script><![endif]-->
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        (n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+      })(window, document);
+    </script>
+    <link
+      href="./img/favicon_32.png" rel="shortcut icon" type="image/x-icon"/>
+    <link href="./img/favicon_256.png" rel="apple-touch-icon"/>
+    <script id="jetboost-script" type="text/javascript">
+      window.JETBOOST_SITE_ID = "ckps6mxxo02l70tvy8z647c24";
+      (function (d) {
+        var s = d.createElement("script");
+        s.src = "https://cdn.jetboost.io/jetboost.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })(document);
+    </script>
+    <script>
+      // Screen Size Detection
+      var desktop;
+      var tabletAndBelow;
+      var tablet;
+      var landscape;
+      var mobile;
+      var viewportWidth = window.innerWidth;
+
+      (function () {
+        var throttle = function (type, name, obj) {
+          obj = obj || window;
+          var running = false;
+          var func = function () {
+            if (running) {
+              return;
+            }
+            running = true;
+            requestAnimationFrame(function () {
+              obj.dispatchEvent(new CustomEvent(name));
+              running = false;
+            });
+          };
+          obj.addEventListener(type, func);
+        };
+
+        throttle("resize", "optimizedResize");
+      })();
+
+      var resizeEvent = function () {
+        viewportWidth = window.innerWidth;
+        //console.log(viewportWidth)
+        if (viewportWidth > 991) {
+          desktop = true;
+          tabletAndBelow = false;
+          tablet = false;
+          landscape = false;
+          mobile = false;
+        } else if (viewportWidth < 992 && viewportWidth > 767) {
+          desktop = false;
+          tabletAndBelow = true;
+          tablet = true;
+          landscape = false;
+          mobile = false;
+        } else if (viewportWidth < 768 && viewportWidth > 479) {
+          desktop = false;
+          tabletAndBelow = true;
+          tablet = false;
+          landscape = true;
+          mobile = false;
+        } else if (viewportWidth < 480) {
+          desktop = false;
+          tabletAndBelow = true;
+          tablet = false;
+          landscape = false;
+          mobile = true;
+        }
+      };
+
+      resizeEvent();
+      window.addEventListener("optimizedResize", resizeEvent);
+    </script>
+    <style type="text/css">
+      .w-webflow-badge {
+        display: none !important;
+      }
+      .owl-carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-dark">
+    <div class="page-wrap">
+      <div class="project-css">
+        <div class="all-breakpoints w-embed">
+          <style>
+            body {
+              /*-webkit-font-smoothing: antialiased;*/
+              -webkit-font-smoothing: antialiased;
+              font-variant-numeric: lining-nums;
+              -moz-font-feature-settings: "lnum";
+              -webkit-font-feature-settings: "lnum";
+              font-feature-settings: "lnum";
+            }
+
+            section {
+              padding-top: 90px;
+              padding-bottom: 90px;
+            }
+
+            a {
+              color: inherit;
+              text-decoration: none;
+            }
+
+            a:focus .arrow {
+              transform: translate3D(45%, 0px, 0px);
+            }
+
+            .hide {
+              display: none;
+            }
+
+            .z-1 {
+              z-index: 1;
+            }
+
+            .visually-hidden {
+              position: absolute !important;
+              height: 1px;
+              width: 1px;
+              overflow: hidden;
+              clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+              clip: rect(1px, 1px, 1px, 1px);
+            }
+
+            .pointer-events-none {
+              pointer-events: none;
+            }
+
+            .pointer-events-auto {
+              pointer-events: auto;
+            }
+
+            .webkit-scrollbar-none::-webkit-scrollbar {
+              display: none;
+            }
+
+            .will-change-transform {
+              will-change: transform;
+            }
+
+            /* Navbar for Chrome & Safari */
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            }
+            .navbar-bg {
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+            }
+
+            .nav-arrow.open {
+              transform: rotateX(180deg);
+            }
+
+            .radio.w--redirected-checked {
+              box-shadow: inset #fff 0px 0px 0px 3px !important;
+              border-color: #007afc;
+            }
+
+            .tabs-menu.justify-center .tab-link {
+              margin-right: 4px;
+              margin-left: 4px;
+            }
+
+            #cta-single-button {
+              display: none;
+            }
+
+            #footer-logo {
+              margin-top: -5px;
+            }
+
+            #footer-nav {
+              max-width: 880px;
+            }
+
+            .faq-tooltip-wrap {
+              pointer-events: none;
+            }
+
+            .active .tooltip {
+              transform: translateY(-115%);
+            }
+
+            .faq-head-h-wrap.focus-visible .opacity-0 {
+              opacity: 1;
+            }
+
+            .faq-head-h-wrap.focus-visible .faq-tooltip-wrap.active {
+              opacity: 1 !important;
+            }
+          </style>
+        </div>
+        <div class="landscape w-embed">
+          <style>
+            @media screen and (max-width: 767px) {
+              section {
+                padding-top: 48px;
+                padding-bottom: 48px;
+              }
+            }
+          </style>
+        </div>
+        <div class="mobile w-embed">
+          <style>
+            @media screen and (max-width: 479px) {
+            }
+          </style>
+        </div>
+        <div class="dark-all-breakpoints w-embed">
+          <style>
+            body.bg-gray-dark .on-air {
+              color: #fff;
+              background: #23262d;
+            }
+
+            body.bg-gray-dark .promo-line {
+              color: #fff;
+              background: #0e3722;
+            }
+
+            body.bg-gray-dark .exit {
+              color: #bbc2ce;
+            }
+
+            body.bg-gray-dark .exit:hover {
+              color: #fff;
+            }
+
+            /* Navbar for Chrome & Safari */
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+              body.bg-gray-dark .navbar-bg {
+                background: rgba(14, 16, 18, 0.75);
+              }
+            }
+
+            /* Navigation */
+
+            body.bg-gray-dark .nav-logo-link {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .secondary-nav.listen-color-theme {
+              background: #161a1d;
+            }
+
+            body.bg-gray-dark .secondary-nav-link.listen-color-theme {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .secondary-nav-link.listen-color-theme:hover {
+              color: #eceff5;
+            }
+
+            body.bg-gray-dark
+              .secondary-nav-link.listen-color-theme.w--current {
+              color: #007afc;
+            }
+
+            body.bg-gray-dark .theme-switch {
+              background: #003165;
+            }
+
+            body.bg-gray-dark .switcher {
+              transform: translateX(17px) rotateZ(360deg);
+            }
+
+            body.bg-gray-dark .sun {
+              opacity: 0;
+            }
+
+            body.bg-gray-dark .moon {
+              opacity: 1;
+            }
+
+            body.bg-gray-dark .burger-line {
+              background: #fff;
+            }
+
+            /* Typography */
+
+            body.bg-gray-dark .h.listen-color-theme {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .p.listen-color-theme {
+              color: #a0aaba;
+            }
+
+            body.bg-gray-dark .title.listen-color-theme {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .title.tag.listen-color-theme {
+              background: #228a56;
+            }
+
+            body.bg-gray-dark .footer-link {
+              color: #a0aaba;
+            }
+
+            body.bg-gray-dark .rich-text.listen-color-theme h1,
+            body.bg-gray-dark .rich-text.listen-color-theme h2,
+            body.bg-gray-dark .rich-text.listen-color-theme h3,
+            body.bg-gray-dark .rich-text.listen-color-theme h4,
+            body.bg-gray-dark .rich-text.listen-color-theme h5,
+            body.bg-gray-dark .rich-text.listen-color-theme h6 {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .rich-text p {
+              color: #a0aaba;
+            }
+
+            /* Buttons */
+
+            body.bg-gray-dark .button.listen-color-theme.disabled,
+            .button.dark-mode.disabled {
+              color: #566171;
+              background: #333943;
+            }
+
+            body.bg-gray-dark .button.stroke.listen-color-theme,
+            .button.stroke.dark-mode {
+              color: #ffffff;
+              background: transparent;
+              box-shadow: inset 0px 0px 0px 1px #566171;
+            }
+
+            body.bg-gray-dark .button.stroke.listen-color-theme.disabled {
+              color: #566171;
+              background: transparent;
+              box-shadow: inset 0px 0px 0px 1px #566171;
+            }
+
+            body.bg-gray-dark .button.monochrome.listen-color-theme {
+              color: #fff;
+              background: #333943;
+            }
+
+            body.bg-gray-dark .button.monochrome.listen-color-theme.disabled {
+              color: #566171;
+              background: #23262d;
+            }
+
+            /* Links */
+
+            body.bg-gray-dark .link:hover {
+              color: #3195ff;
+            }
+
+            /* Form Elements */
+
+            body.bg-gray-dark .input.listen-color-theme {
+              color: #fff;
+              background: #0e1012;
+              border-color: #566171;
+            }
+
+            body.bg-gray-dark .input.listen-color-theme:placeholder {
+              color: #8b96aa;
+            }
+
+            body.bg-gray-dark .input.listen-color-theme:hover {
+              border-color: #8b96aa;
+            }
+
+            body.bg-gray-dark .input.listen-color-theme:focus {
+              border-color: #007afc;
+            }
+
+            body.bg-gray-dark .radio.listen-color-theme {
+              box-shadow: inset #0e1012 0px 0px 0px 10px;
+              border-color: #566171;
+            }
+
+            body.bg-gray-dark .radio.listen-color-theme.w--redirected-checked {
+              box-shadow: inset #0e1012 0px 0px 0px 3px !important;
+              border-color: #007afc;
+            }
+
+            body.bg-gray-dark .checkbox.listen-color-theme {
+              border-color: #566171;
+            }
+
+            body.bg-gray-dark
+              .checkbox.listen-color-theme.w--redirected-checked {
+              background-color: #007afc;
+              border-color: #007afc;
+            }
+
+            /* Misc */
+
+            body.bg-gray-dark #log-in {
+              color: #fff;
+            }
+
+            body.bg-gray-dark #log-in:hover {
+              color: #007afc;
+            }
+
+            body.bg-gray-dark .banner {
+              background: #161a1d;
+            }
+
+            body.bg-gray-dark .cta-banner {
+              background: #161a1d;
+            }
+
+            body.bg-gray-dark .divider.listen-color-theme {
+              background: #333943;
+            }
+
+            body.bg-gray-dark .tab-link.listen-color-theme {
+              color: #d5dae2;
+            }
+
+            body.bg-gray-dark .tab-link.listen-color-theme:hover {
+              color: #fff;
+            }
+
+            body.bg-gray-dark .tab-link.listen-color-theme.w--current {
+              color: #fff;
+              background: #003165;
+            }
+
+            body.bg-gray-dark .faq-head {
+              background: #0e1012;
+            }
+
+            body.bg-gray-dark .faq-head-bg {
+              background: #161a1d;
+            }
+
+            body.bg-gray-dark .logo {
+              color: #566171;
+            }
+
+            body.bg-gray-dark .social-link {
+              color: #a0aaba;
+            }
+
+            body.bg-gray-dark .back-to-top {
+              background: #333943;
+              color: #fff;
+            }
+
+            body.bg-gray-dark .popup.listen-color-theme {
+              background: rgba(14, 16, 18, 0.8);
+            }
+
+            body.bg-gray-dark .tooltip {
+              background: rgba(0, 0, 0, 0.8);
+              color: #fff;
+              box-shadow: 0px 2px 34px 0px #000;
+            }
+          </style>
+        </div>
+        <div class="dark-desktop w-embed">
+          <style>
+            @media screen and (min-width: 992px) {
+              body.bg-gray-dark .on-air:hover {
+                background: #333943;
+              }
+
+              body.bg-gray-dark .promo-line:hover {
+                background: #145334;
+              }
+
+              body.bg-gray-dark a:hover .title.tag {
+                background: #2fc078;
+              }
+
+              body.bg-gray-dark .link.listen-color-theme:hover {
+                color: #3195ff;
+              }
+
+              body.bg-gray-dark .nav-item {
+                color: #fff;
+              }
+
+              body.bg-gray-dark .button.stroke.listen-color-theme:hover {
+                color: #3195ff;
+                background: #001832;
+                box-shadow: inset 0px 0px 0px 1px #3195ff;
+              }
+
+              body.bg-gray-dark
+                .button.stroke.listen-color-theme.disabled:hover {
+                color: #566171;
+                background: transparent;
+                box-shadow: inset 0px 0px 0px 1px #566171;
+              }
+
+              body.bg-gray-dark .button.monochrome.listen-color-theme:hover {
+                color: #fff;
+                background: #003165;
+              }
+
+              body.bg-gray-dark
+                .button.monochrome.listen-color-theme.disabled:hover {
+                color: #566171;
+                background: #23262d;
+                box-shadow: none;
+              }
+
+              body.bg-gray-dark .faq-head:hover {
+                background: #161a1d;
+              }
+
+              body.bg-gray-dark .logo-link:hover {
+                color: #bbc2ce;
+              }
+
+              body.bg-gray-dark .footer-link:hover {
+                color: #3195ff;
+              }
+
+              body.bg-gray-dark .social-link:hover {
+                color: #3195ff;
+              }
+
+              body.bg-gray-dark .back-to-top:hover {
+                background: #003165;
+                color: #64afff;
+              }
+            }
+          </style>
+        </div>
+        <div class="dark-tablet w-embed">
+          <style>
+            @media screen and (max-width: 991px) {
+              body.bg-gray-dark .link:hover {
+                color: #007afc;
+              }
+
+              body.bg-gray-dark .link:active {
+                color: #3195ff;
+              }
+
+              body.bg-gray-dark .button.stroke:active {
+                color: #3195ff;
+                box-shadow: inset 0px 0px 0px 1px #3195ff;
+              }
+
+              body.bg-gray-dark .faq-head:active {
+                background: #161a1d;
+              }
+
+              body.bg-gray-dark .social-link:active {
+                color: #007afc;
+              }
+
+              body.bg-gray-dark .back-to-top:hover {
+                background: #333943;
+                color: #fff;
+              }
+
+              body.bg-gray-dark .back-to-top:active {
+                background: #003165;
+                color: #64afff;
+              }
+            }
+          </style>
+        </div>
+      </div>
+      <div class="page-css">
+        <div class="all-breakpoints w-embed">
+          <style>
+            #section-hero {
+              padding-top: 176px;
+              padding-bottom: 70px;
+            }
+
+            #section-maps {
+              padding-top: 70px;
+            }
+
+            #section-navigation {
+              padding-bottom: 84px;
+            }
+
+            #maps-row {
+              width: 1560px;
+              max-width: 125vw;
+            }
+
+            #maps-2 {
+              top: -96px;
+            }
+
+            #studio-desktop {
+              width: 681px;
+              max-width: 48vw;
+            }
+
+            #navigation-tablet {
+              max-width: 950px;
+            }
+
+            #navigation-phone {
+              max-width: 290px;
+            }
+
+            .width-100.position-relative.pointer-events-none
+              .position-absolute {
+              top: -139px;
+              right: 0px;
+            }
+
+            #search {
+              width: 660px;
+              max-width: 49vw;
+            }
+
+            #vision {
+              width: 621px;
+              max-width: 45vw;
+            }
+
+            #vision-visual {
+              width: 820px;
+              max-width: 45vw;
+            }
+
+            #atlas {
+              width: 755px;
+              max-width: 50vw;
+            }
+
+            #showcase-grid a {
+              height: 360px;
+            }
+
+            #data {
+              max-width: 45vw;
+              width: 730px;
+            }
+
+            #sparkles {
+              position: relative;
+              top: 3px;
+              font-size: 20px;
+              line-height: 0px;
+            }
+          </style>
+        </div>
+        <div class="desktop w-embed">
+          <style>
+            @media screen and (min-width: 992px) {
+            }
+          </style>
+        </div>
+        <div class="tablet w-embed">
+          <style>
+            @media screen and (max-width: 991px) {
+              #maps-row {
+                margin-left: -36px;
+                padding-left: 36px;
+                max-width: calc(100vw + 100px);
+                overflow: auto;
+                -webkit-align-self: flex-start;
+                -ms-flex-item-align: start;
+                align-self: flex-start;
+              }
+
+              #maps-row .w-embed:last-child {
+                border-right: 136px solid transparent;
+              }
+
+              #section-navigation {
+                padding-bottom: 70px;
+              }
+
+              #maps-2 {
+                top: 0px;
+              }
+
+              #straightaway-logo {
+                max-width: 250px;
+              }
+
+              #atlas {
+                max-width: 585px;
+              }
+            }
+          </style>
+        </div>
+        <div class="landscape w-embed">
+          <style>
+            @media screen and (max-width: 767px) {
+              #section-hero {
+                padding-top: 132px;
+                padding-bottom: 40px;
+              }
+
+              #section-maps {
+                padding-top: 40px;
+              }
+
+              .home-maps-horizontal {
+                width: 400px;
+                max-width: 80vw;
+              }
+
+              #studio-desktop {
+                width: 440px;
+                max-width: 100%;
+              }
+
+              #search {
+                max-width: 100%;
+              }
+
+              #straightaway-logo {
+                width: 180px;
+                max-width: 90%;
+              }
+
+              #straightaway-visual {
+                width: 115%;
+              }
+
+              #vision {
+                width: 100%;
+                max-width: 100%;
+              }
+
+              #vision-visual {
+                width: 100%;
+                max-width: 100%;
+              }
+
+              #data {
+                max-width: 100%;
+              }
+
+              #atlas {
+                max-width: 90vw;
+              }
+            }
+          </style>
+        </div>
+        <div class="mobile w-embed">
+          <style>
+            @media screen and (max-width: 479px) {
+              .home-maps-vertical {
+                width: 298px;
+                max-width: 80vw;
+              }
+
+              #home-maps-horizontal {
+                width: 404px;
+                max-width: 100vw;
+              }
+            }
+
+            @media screen and (max-width: 328px) {
+              #section-hero {
+                padding-top: 152px;
+              }
+            }
+          </style>
+        </div>
+        <!--start-->
+        <div class="dark-all-breakpoints w-embed">
+          <style>
+            body.bg-gray-dark .home-carousel-slide {
+              box-shadow: 0 0 100px 50px #0e1012;
+            }
+
+            body.bg-gray-dark .home-carousel-slide-overlay {
+              box-shadow: inset 0 -175px 175px -75px #0e1012;
+            }
+
+            body.bg-gray-dark .carousel-nav-link {
+              color: #8b96aa;
+            }
+
+            #cnn-path {
+              transition: stroke 400ms ease;
+            }
+
+            body.bg-gray-dark #cnn-path {
+              stroke: #0e1012;
+            }
+
+            #shopify-path {
+              transition: fill 400ms ease;
+            }
+
+            body.bg-gray-dark #shopify-path {
+              fill: #0e1012;
+            }
+
+            body.bg-gray-dark #straightaway-banner {
+              background: #171c1f;
+            }
+          </style>
+        </div>
+        <div class="dark-desktop w-embed">
+          <style>
+            @media screen and (min-width: 992px) {
+              body.bg-gray-dark .carousel-nav-link:hover {
+                color: #fff;
+              }
+            }
+          </style>
+        </div>
+        <div class="dark-tablet w-embed">
+          <style>
+            @media screen and (max-width: 991px) {
+            }
+          </style>
+        </div>
+        <div class="slider-css w-embed w-script">
+          <style>
+            /* Slider CSS*/
+            .home-carousel-slide-in,
+            .home-carousel-video-lightbox {
+              pointer-events: none;
+            }
+            .carousel.carousel-slider {
+              top: 0;
+              left: 0;
+            }
+            .carousel.carousel-slider .carousel-fixed-item {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 20px;
+              z-index: 1;
+            }
+            .carousel.carousel-slider .carousel-fixed-item.with-indicators {
+              bottom: 68px;
+            }
+            .carousel.carousel-slider .carousel-item {
+              width: 100%;
+              height: 100%;
+              min-height: 400px;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .carousel.carousel-slider .carousel-item h2 {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 32px;
+            }
+            .carousel.carousel-slider .carousel-item p {
+              font-size: 15px;
+            }
+            .carousel .carousel-item {
+              visibility: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .carousel .carousel-item > img {
+              width: 100%;
+            }
+          </style>
+        </div>
+      </div>
+      <div class="navbar-wrap pointer-events-none">
+        <nav class="navbar pointer-events-auto">
+          <div class="navbar-bg"></div>
+          <div class=" flex align-center justify-space-between container max-width-1680">
+            <a href="https://www.total3d.com.br" class="nav-logo-link w-inline-block">
+                <div class="flex w-embed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="max-width: 120px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 136 28" fill="none" xmlns:v="https://vecta.io/nano">
+                  <path d="M16.56,0H6.73V6.72H0v9.84A6.66,6.66,0,0,0,6.64,23.2h9.84V16.48H23.2V6.64A6.66,6.66,0,0,0,16.56,0Zm-.11,16.45H6.75V6.75h9.7ZM102.9,15.2a.84.84,0,0,0-.83-.84H101V17h.42V16h.5l.73,1h.51l-.77-1A.82.82,0,0,0,102.9,15.2Zm-.9.45h-.61v-.88H102c.31,0,.49.16.49.44A.43.43,0,0,1,102,15.65Zm-.07-3.59h0a3.64,3.64,0,1,0,3.65,3.64A3.64,3.64,0,0,0,101.9,12.06Zm.07,6.73-.1,0a3.11,3.11,0,1,1,3.1-3.13A3.05,3.05,0,0,1,102,18.79Zm-62.07-13H29.1V8.09h4.15v11h2.51v-11h4.17Zm4.5,3.14h-.1a5,5,0,0,0-3.53,1.49,5.11,5.11,0,0,0-1.51,3.69,5.17,5.17,0,0,0,1.52,3.73,4.9,4.9,0,0,0,3.5,1.48h.1a5,5,0,0,0,3.66-1.51,5.17,5.17,0,0,0,1.52-3.69,5,5,0,0,0-1.49-3.66A5.12,5.12,0,0,0,44.43,8.88ZM47,14.11a2.63,2.63,0,0,1-2.47,2.8h-.1v0a2.62,2.62,0,0,1-2.6-2.62v-.18a2.62,2.62,0,0,1,2.39-2.83h.2A2.68,2.68,0,0,1,47,14Zm7.47,1.22h0v-4h2.76V9.11H54.47V6.56H52V9.11H50.42v2.18H52v4.28c0,2.44,1.32,3.72,3.82,3.72a7,7,0,0,0,1.76-.23V16.89c-.63.06-1,.08-1.19.08C55,17,54.47,16.48,54.47,15.33ZM90,5.72H85.68V19.05h4.18a7,7,0,0,0,5.14-2,6.42,6.42,0,0,0,1.86-4.71,6.23,6.23,0,0,0-1.79-4.62A7.07,7.07,0,0,0,90,5.72Zm.37,11h0a3.84,3.84,0,0,1-.48,0l0,0H88.19V8.09h1.65c2.73,0,4.43,1.63,4.43,4.27A4.15,4.15,0,0,1,90.32,16.7ZM70,19.05h2.52V3.91H70ZM80.33,10.7v0h-.09l2.91-4.25V5.74H75V8.09h4.39l-2.78,4v.62h1.56c1.76,0,2.73.72,2.73,2a2.13,2.13,0,0,1-2.1,2.16h-.23A3.26,3.26,0,0,1,75.75,15L74,16.33a5,5,0,0,0,4.63,3A4.59,4.59,0,0,0,83.45,15v-.21a3.92,3.92,0,0,0-.89-2.62A4.33,4.33,0,0,0,80.33,10.7ZM63.39,8.88h0a5.2,5.2,0,0,0-4.16,2l1.29,1.58a3.31,3.31,0,0,1,2.57-1.35,1.7,1.7,0,0,1,2,1.39v0A2,2,0,0,1,65,13v.51H62.46c-2.22,0-3.6,1.1-3.6,2.87s1.32,2.94,3.29,2.94a3.91,3.91,0,0,0,2.92-1.2l.12-.13v1.09h2.29V13.13C67.48,10.47,66,8.88,63.39,8.88ZM65,15.35a2,2,0,0,1-1.93,2.07h-.18c-.9,0-1.47-.46-1.47-1.17s.51-1.09,1.43-1.09H65Z" fill="currentColor"/></svg>
+                </div>
+              <div class="visually-hidden">Home page</div>
+            </a>
+            <div class="flex align-center">
+              <div id="sign-up" class="flex align-center">
+                <a id="log-in" href="#" class="nav-link small mr-16 m_hide">PT-BR</a>
+                <a href="#buynow" class="button small w-button">Ver Oferta</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- header-->
+      <header class="header overflow-hidden">
+        <section id="section-hero" class="section">
+          <div class="container flex direction-vertical align-center text-align-center">
+            <h1 class="h super listen-color-theme max-width-656 mb-24 t_max-width-464 t_mb-16 l_mb-12">Eleita a melhor biblioteca de blocos 3D em 2021</h1>
+            <p class="p super listen-color-theme max-width-540B mb-80 t_max-width-464">Os Blocos da Total3D foram eleitos os melhores de 2021. São 30 mil Blocos High Poly compatíveis com o V-Ray e Corona, texturizados e mapeados com alto detalhamento de polígonos que vão garantir o máximo realismo às suas cenas. Descubra agora como transformar seu render definitivamente.</p>
+                <link rel="prerender" href="#"/>
+            <div class="carousel-wrap flex direction-vertical align-center mb-32">
+              <div class="w-embed">
+                <style>
+                  .home-carousel-slide.active .home-carousel-slide-in,
+                  .home-carousel-slide.active .home-carousel-video-lightbox {
+                    pointer-events: auto;
+                  }
+                </style>
+              </div>
+              <div tabindex="0" class="carousel-focus slider-focus"></div>
+              <div class="carousel">
+                <div class="home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <div class="home-carousel-slide-in align-center justify-center">
+                    <div data-poster-url="  " data-video-urls="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/60672ad908233e5e4dfff3ae_home-hero-video-compressed-transcode.mp4,https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/60672ad908233e5e4dfff3ae_home-hero-video-compressed-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="home-carousel-slide-img w-background-video w-background-video-atom">
+                      <video autoplay=""loop=""style="background-image: url('./video/vid01tumb.jpg');" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                        <source src="./video/vid01.mp4" data-wf-ignore="true"/>
+                        <source src="./video/vid01.webm" data-wf-ignore="true"/>
+                      </video>
+                    </div>
+                    <a href="#" class="home-carousel-video-lightbox slider-focus w-inline-block w-lightbox">
+                        <div id="play" class="position-relative flex w-embed">
+                        <style>
+                          @media screen and (max-width: 991px) {
+                            #play {
+                              width: 61px;
+                            }
+                          }
+                          @media screen and (max-width: 991px) {
+                            #play {
+                              width: 35px;
+                            }
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="82" preserveAspectRatio="xMidYMid meet" viewBox="0 0 71 82" fill="none"xmlns:v="https://vecta.io/nano">
+                          <path d="M69 37.536c2.667 1.54 2.667 5.389 0 6.928L6 80.837c-2.667 1.54-6-.385-6-3.464V4.627C0 1.548 3.333-.377 6 1.163l63 36.373z" fill="#fff"/>
+                        </svg>
+                      </div>
+                      <div class="visually-hidden">Play a video</div>
+                      <script type="application/json" class="w-json">
+                        {
+                          "items": [
+                            {
+                              "type": "video",
+                              "originalUrl": "https://player.vimeo.com/video/580805888?autoplay=1&title=0&byline=0&portrait=0",
+                              "url": "https://player.vimeo.com/video/580805888?autoplay=1&title=0&byline=0&portrait=0",
+                              "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F580805888%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F580805888%3Fautoplay%3D1%26title%3D0%26byline%3D0%26portrait%3D0&image=http%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1149525199_1280&key=96f1f04c5f4143bcb0f2e68c87d65feb&autoplay=1&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"581\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+                              "thumbnailUrl": "http://i.vimeocdn.com/video/1149525199_1280",
+                              "width": 940,
+                              "height": 581
+                            }
+                          ]
+                        }
+                      </script></a>
+                    <div class="home-carousel-slide-overlay"></div>
+                  </div>
+                </div>
+                <div class="home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class="home-carousel-slide-img pointer-events-none w-embed">
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/01slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/01slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/01slider.jpg"alt/>
+                      </picture>
+                    </div>
+                    <div class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-250 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">EXCLUSIVO</div>
+                      <h3 class="h _3 color-white">30 Mil Blocos Mapeados e Texturizados de SketchUp</h3>
+                    </div>
+                </a>
+                </div>
+                <div class="home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class="home-carousel-slide-img pointer-events-none w-embed">
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/02slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/02slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/02slider.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-350 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">EXCLUSIVO</div>
+                      <h3 class="h _3 color-white">30 Mil Blocos Mapeados e Texturizados de 3DSMax.</h3>
+                    </div>
+                </a>
+                </div>
+                <div class="home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class="home-carousel-slide-img pointer-events-none w-embed">
+                      <style>
+                        @media (max-width: 991px) {
+                          #mobile-maps-slide-overlay {
+                            background-color: rgba(22, 26, 29, 0.4);
+                          }
+                        }
+                      </style>
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/03slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/03slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/03slider.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div id="mobile-maps-slide-overlay" class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-350 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">Biblioteca Exclusiva</div>
+                      <h3 class="h _3 color-white">10 Mil texturas PBR 8K</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class=" home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class="home-carousel-slide-img pointer-events-none w-embed">
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/04slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/04slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/04slider.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-350 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">Melhor Avaliação</div>
+                      <h3 class="h _3 color-white">A Biblioteca melhor avaliada em 2021 com garantia de satisfação.</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class=" home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class="home-carousel-slide-img pointer-events-none w-embed">
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/05slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/05slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/05slider.jpg" alt/>
+                      </picture>
+                    </div>
+                    <div class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-350 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">Compatibilidade</div>
+                      <h3 class="h _3 color-white">Blocos configurados para V-Ray e Corona Render</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class=" home-carousel-slide carousel-item flex sizing-fixed overflow-hidden">
+                  <a href="#" class="home-carousel-slide-in slider-focus w-inline-block">
+                    <div class=" home-carousel-slide-img pointer-events-none w-embed">
+                      <picture class="home-carousel-slide-img">
+                        <source media="(min-width: 768px)" srcset="./img/slider/06slider.jpg"/>
+                        <source media="(max-width: 767px)" srcset="./img/slider/06slider.jpg"/>
+                        <img class="home-carousel-slide-img" src="./img/slider/06slider.jpg" alt/>
+                      </picture>
+                    </div>
+                    <div class="home-carousel-slide-overlay pointer-events-none"></div>
+                    <div class="position-relative max-width-350 pointer-events-none">
+                      <div class="title tag listen-color-theme mb-32 l_mb-12">Mentoria Grátis</div>
+                      <h3 class="h _3 color-white">A Total3D oferece mentoria para te levar ainda mais longe</h3>
+                    </div>
+                    </a>
+                </div>
+              </div>
+              <div tabindex="0" class="carousel-focus slider-focus"></div>
+            </div>
+            <div class="carousel-nav mb-140 t_mb-80">
+              <div id="prev" class=" carousel-nav-link prev flex align-center justify-center w-embed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" fill="none" xmlns:v="https://vecta.io/nano">
+                  <path d="M10.485 17.971L2 9.485 10.485 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div id="next" class="carousel-nav-link next flex align-center justify-center w-embed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" fill="none" xmlns:v="https://vecta.io/nano">
+                  <path d="M1.485 1l8.485 8.485-8.485 8.485" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h2 class="title mb-60 listen-color-theme l_mb-32">OS MAIORES ESCRITÓRIOS USAM</h2>
+            <div class="logo-row home-logo-row t_mb-48 l_mb-24">
+              <div class="logo flex align-center">
+                <div class="flex w-embed">
+                  <style>
+                    @media screen and (max-width: 991px) {
+                      .gm {
+                        width: 44px;
+                      }
+                    }
+                    @media screen and (max-width: 767px) {
+                      .gm {
+                        width: 36px;
+                      }
+                    }
+                  </style>
+                  <svg width="67" height="41" viewBox="0 0 47.27 21.95" preserveAspectRatio="xMidYMid meet" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="gm">
+                    <path d="M26.35,21.61h3.28V6.55H26.35Zm-15.56-6.8L5.14.81H0v20.8H3.65V5.86L10,21.61h1.56L18,5.86V21.61h3.65V.81H16.46ZM28,0a2,2,0,1,0,2,2A2,2,0,0,0,28,0ZM45.08,17.59a2.18,2.18,0,1,0,2.19,2.18A2.2,2.2,0,0,0,45.08,17.59ZM37.3,8.76V6.55H34V21.61H37.3V11.35a5.22,5.22,0,0,1,3.87-2,4.91,4.91,0,0,1,1,.1V6.21A6.45,6.45,0,0,0,37.3,8.76Z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logo flex align-center">
+                <div class="flex w-embed">
+                  <style>
+                    @media screen and (max-width: 991px) {
+                      .snap {
+                        width: 85px;
+                      }
+                    }
+                    @media screen and (max-width: 767px) {
+                      .snap {
+                        width: 65px;
+                      }
+                    }
+                  </style>
+                  <svg class="snap" xmlns="http://www.w3.org/2000/svg" width="114px" height="41px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 94.66 21.93" fill="currentColor" xmlns:v="https://vecta.io/nano">
+                    <path d="M0,4.92H4.82v17h5.6v-17h4.77V0H0Zm31.42,9.51h-.05L27,0h-7.2V21.93H25L24.79,5.31l4.74,16.62h3.7L37.92,5.45l0,.06L37.8,21.93H43V0H35.72ZM64,7.56a7.27,7.27,0,0,0-4-6.76A13.66,13.66,0,0,0,54.74,0H47.57V21.93h5.36V14.85H53l5.07,7.08h6.4l-5.95-7.47A6.65,6.65,0,0,0,64,7.56ZM55,11H52.93V4.92h2.14c2.1,0,3.52,1.07,3.52,3C58.59,10,57.23,11,55,11ZM89,0,86,14.31h-.06L82.77,0H78.48L75.25,14.25h-.06L72.25,0H66.56l5.66,21.93h5.07l3.29-14.2h.06l3.29,14.2h4.92L94.66,0Z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logo flex align-center">
+                <div class="flex w-embed">
+                  <style>
+                    @media screen and (max-width: 991px) {
+                      .bmw {
+                        width: 80px;
+                      }
+                    }
+                    @media screen and (max-width: 767px) {
+                      .bmw {
+                        width: 55px;
+                      }
+                    }
+                  </style>
+                  <svg class="bmw" xmlns="http://www.w3.org/2000/svg" width="112px" height="28px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 91.65 21.96" fill="currentColor" xmlns:v="https://vecta.io/nano">
+                    <path d="M57.18,0A10.55,10.55,0,0,0,46.75,10.88v.23A10.56,10.56,0,0,0,57.24,22C63,22,67.62,17.05,67.62,11v-.23A10.51,10.51,0,0,0,57.18,0Zm9.38,11c0,5.67-4,9.94-9.32,9.94s-9.44-4.23-9.44-9.85v-.23c0-5.64,4-9.89,9.38-9.89s9.38,4.21,9.38,9.8ZM35,10.42a4.65,4.65,0,0,0,3.21-4.65V5.65C38.17,2.22,35.86.18,32,.18h-5.8v21.6h6.69c4,0,6.38-2.22,6.38-5.94v-.12A5.11,5.11,0,0,0,35,10.42ZM27.25,1.17H32c3.31,0,5.13,1.59,5.13,4.48v.12c0,2.66-1.89,4.24-5,4.24H27.25Zm11,14.67c0,3.19-1.89,4.95-5.33,4.95H27.25V11h4.83c2.8,0,6.13.82,6.13,4.72ZM5.59.18H0v21.6H5.53c6.55,0,10.61-4.12,10.61-10.76v-.23C16.14,4.34,12,.18,5.59.18ZM15.09,11c0,6.12-3.6,9.77-9.62,9.77H1.05V1.17H5.44c6,0,9.65,3.6,9.65,9.62ZM83,10.55,91.24.18H90L82.31,9.75,74.6.18H73.35l8.26,10.31L72.79,21.78H74l8.22-10.47,8.16,10.47h1.24Z"/>
+                </svg>
+                </div>
+              </div>
+              <div class="logo flex align-center">
+                <div class="flex w-embed">
+                  <style>
+                    @media screen and (max-width: 991px) {
+                      .national-geografic {
+                        width: 120px;
+                      }
+                    }
+                    @media screen and (max-width: 767px) {
+                      .national-geografic {
+                        width: 65px;
+                      }
+                    }
+                  </style>
+                  <svg class="national-geografic" width="80px" height="80px" viewBox="0 0 68.15 68.06" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M52.93,56.06,51.38,62.2l-1.54-6.14H48.65l2.27,9.15h.92l2.29-9.15Zm3.22,0L54,65.22h1.21l.58-2.56h1.59L58,65.22h1.22l-2.13-9.15Zm0,5.43.52-2.26.52,2.26Zm8.84,2.4H63.78v1.32h1.16ZM37.53,54a2.78,2.78,0,0,0,.53-1.87,2.9,2.9,0,0,0-.53-1.89.58.58,0,0,0-.1-.12l.1-.11a2.9,2.9,0,0,0,.53-1.89,2.77,2.77,0,0,0-.53-1.87,2.06,2.06,0,0,0-1.72-.7H34.06v9.16h1.75A2.1,2.1,0,0,0,37.53,54Zm-2.3-7.28h.58a1.1,1.1,0,0,1,.77.21,1.7,1.7,0,0,1,.3,1.2,1.86,1.86,0,0,1-.25,1.14.81.81,0,0,1-.24.17,1.23,1.23,0,0,1-.57.1h-.59Zm0,4h.6a1,1,0,0,1,.75.21,1.81,1.81,0,0,1,.31,1.22,1.64,1.64,0,0,1-.3,1.18,1.05,1.05,0,0,1-.77.22h-.59ZM46.89,61.61l-2.23-5.55h-1V65l-2.07-8.88h-.93l-2.11,9.15h1.21l.58-2.56H42l.58,2.56h2.32V59.67l2.23,5.54h1V56.06H46.89Zm-6.25-.11.52-2.26.52,2.26ZM0,0V68.06H68.15V0ZM67.05,67H1.1V1.1h66Zm-6-5.76.22.1a2.5,2.5,0,0,1,.75.45,1.19,1.19,0,0,1,.36.93,2,2,0,0,1-.16.87.91.91,0,0,1-.85.5,1.09,1.09,0,0,1-.5-.1.63.63,0,0,1-.22-.18,1.79,1.79,0,0,1-.28-1.15V62H59.16v.59c0,1.64.73,2.59,2.18,2.59a2.26,2.26,0,0,0,2.19-2.53,2.4,2.4,0,0,0-.77-1.83,3.29,3.29,0,0,0-1.08-.64l-.2-.09a1.94,1.94,0,0,1-.79-.5,1.23,1.23,0,0,1-.36-.94,2.09,2.09,0,0,1,.16-.86.85.85,0,0,1,.85-.58,1,1,0,0,1,.64.17,1.63,1.63,0,0,1,.37,1.27v.57h1.16v-.58a3,3,0,0,0-.53-1.9,2,2,0,0,0-1.66-.72,2.06,2.06,0,0,0-1.57.72,2.85,2.85,0,0,0-.61,1.9,2.45,2.45,0,0,0,.75,1.84A3.61,3.61,0,0,0,61,61.19Zm-16.66-9h1.59l.58,2.55h2.32V49.19l2.25,5.53h1V45.58H50.88v5.54l-2.23-5.54h-1v8.86L45.6,45.58h-.93l-2.11,9.16h1.2Zm.79-3.42L45.66,51h-1Zm-2.72,4.8H39.61v-8H38.44v9.14h4ZM34.59,64.5a1.84,1.84,0,0,0,.59.48,2.18,2.18,0,0,0,1.06.25,1.94,1.94,0,0,0,1.63-.73,3,3,0,0,0,.54-1.89V62H37.23v.58A2,2,0,0,1,37,63.78a.85.85,0,0,1-.72.28.94.94,0,0,1-.5-.1.58.58,0,0,1-.23-.18,1.86,1.86,0,0,1-.28-1.17V58.68a1.63,1.63,0,0,1,.37-1.27.94.94,0,0,1,.63-.17.93.93,0,0,1,.63.17,1.67,1.67,0,0,1,.37,1.27v.58H38.4v-.58a3,3,0,0,0-.53-1.89,2.24,2.24,0,0,0-3.29,0,3,3,0,0,0-.52,1.89v3.93A3,3,0,0,0,34.59,64.5ZM53.83,51.72l.49-.75,2.08,3.75h1.34l-2.69-4.86,2.79-4.28h-1.4l-2.6,4v-4H52.67v9.13h1.16Z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logo flex align-center">
+                <div class="flex w-embed">
+                  <style>
+                    @media screen and (max-width: 991px) {
+                      .strava {
+                        width: 100px;
+                      }
+                    }
+                    @media screen and (max-width: 767px) {
+                      .strava {
+                        width: 77px;
+                      }
+                    }
+                  </style>
+                  <svg class="strava" xmlns="http://www.w3.org/2000/svg" width="149px" height="72px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 109 22" fill="currentColor" xmlns:v="https://vecta.io/nano">
+                    <path d="M21.15,19.85V18.46a.21.21,0,0,1,.21-.21h3.88V16.31H21.36a.21.21,0,0,1-.21-.21V14.7a.2.2,0,0,1,.21-.2h5.06V12.55h-7.3V22h7.31V20.06H21.36A.21.21,0,0,1,21.15,19.85ZM24.5.17H19.13V9.63h2V6.55a.22.22,0,0,1,.21-.21h1.35a.24.24,0,0,1,.17.09l2.29,3.2h2.41L25.1,6.28a2.9,2.9,0,0,0,2.49-3h0A3.09,3.09,0,0,0,24.5.17Zm1.06,3.09a1.07,1.07,0,0,1-1.2,1.14h-3a.21.21,0,0,1-.21-.2V2.32a.21.21,0,0,1,.21-.21h3a1.07,1.07,0,0,1,1.19,1.15Zm39.52.79V5.74H84.66V4.05ZM11.94,7.48V6.08a.2.2,0,0,1,.2-.21H16V3.93H12.14a.21.21,0,0,1-.2-.21V2.32a.21.21,0,0,1,.2-.21h5.07V.17H9.9V9.63h7.31v-2H12.14A.2.2,0,0,1,11.94,7.48ZM5.36.17H0V9.63H2V6.55a.21.21,0,0,1,.2-.21H5.36A3.08,3.08,0,0,0,8.45,3.26h0A3.09,3.09,0,0,0,5.36.17ZM5.23,4.4h-3A.2.2,0,0,1,2,4.2V2.32a.2.2,0,0,1,.2-.21h3A1.07,1.07,0,0,1,6.42,3.26,1.06,1.06,0,0,1,5.23,4.4Zm36-4.23h-2V9.62h2Zm-9.68,8a.28.28,0,0,1,0-.12l.94-1.25a.19.19,0,0,1,.28,0,.08.08,0,0,1,0,0l2.33,2.83h2.62L34,5.05a.23.23,0,0,1,0-.26L37.4.17H34.89l-3,4.27a.21.21,0,0,1-.29.06.23.23,0,0,1-.08-.17V.17h-2V9.63h2Zm29.68.76Zm7.69,3.61L65.81,22H68l.39-1.21a.18.18,0,0,1,.19-.13h3.29a.2.2,0,0,1,.2.13L72.4,22h2.14l-3.09-9.46Zm2.2,6.28H69.19a.2.2,0,0,1-.13-.26L70,15.71a.21.21,0,0,1,.13-.13.21.21,0,0,1,.26.13l.92,2.85a.15.15,0,0,1,0,.07A.2.2,0,0,1,71.1,18.83Zm-25-4.33H48.5a.21.21,0,0,1,.21.21V22h2v-7.3a.2.2,0,0,1,.2-.21h2.44V12.55H46.07Zm13.7,3.31a.21.21,0,0,1-.28.09.2.2,0,0,1-.09-.09l-2.9-5.26H54.87V22h2V18a.21.21,0,0,1,.21-.21.22.22,0,0,1,.18.1l2.28,4,2.29-4a.21.21,0,0,1,.39.11V22h2V12.55H62.66Zm1.44-8.87h0a2.67,2.67,0,0,0,.87-2.13c0-1.55-1-2.46-2.91-2.72s-2.82-.41-2.82-1.33c0-.37.21-1,1.67-1a1.94,1.94,0,0,1,1.43.43,1,1,0,0,1,.28.66l2-.49C61.51,1.6,60.83,0,58,0c-2.5,0-3.71.94-3.71,2.87,0,1.47,1,2.46,3,2.78S60,6.15,60,7c0,.66-.62,1-1.75,1-1.33,0-2.08-.43-2.14-1.22L54,7.31c.29,1.61,1.76,2.49,4.14,2.49A4.62,4.62,0,0,0,61.21,8.94ZM30.76,12.55,27.67,22h2.14l.39-1.21a.18.18,0,0,1,.19-.13h3.28a.2.2,0,0,1,.2.13L34.26,22H36.4l-3.09-9.46ZM33,18.83H31a.2.2,0,0,1-.12-.26l.91-2.85a.21.21,0,0,1,.13-.13.22.22,0,0,1,.27.13l.92,2.85a.17.17,0,0,1,0,.07A.21.21,0,0,1,33,18.83Zm17.83-9.2h1.5V.17h-2V5.34a.21.21,0,0,1-.36.13L45.17.17H43.7V9.63h2V4.39a.21.21,0,0,1,.21-.21.18.18,0,0,1,.15.07Zm31.85,8.09a.21.21,0,0,1-.21.2.17.17,0,0,1-.15-.07l-4.73-5.3H76.07V22h2V16.77a.2.2,0,0,1,.2-.21.2.2,0,0,1,.16.07L83.16,22h1.5V12.55h-2ZM42.31,16.46c-1.8-.24-2.82-.42-2.82-1.33,0-.38.22-1,1.68-1a1.9,1.9,0,0,1,1.42.43.93.93,0,0,1,.27.65l2-.48c-.17-.76-.85-2.35-3.68-2.35-2.5,0-3.72.93-3.72,2.86,0,1.48,1,2.46,3,2.78s2.75.51,2.75,1.34c0,.66-.63,1-1.75,1-1.33,0-2.08-.43-2.14-1.21l-2.1.52c.3,1.6,1.77,2.49,4.15,2.49a4.57,4.57,0,0,0,3.07-.87,2.69,2.69,0,0,0,.86-2.13C45.22,17.62,44.24,16.71,42.31,16.46Z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main class="main overflow-hidden">
+        <section id="section-maps" class="section reveal">
+          <div class="container">
+            <h2 class="h _2 listen-color-theme mb-24 t_mb-16">A Total3D é para você</h2>
+            <p class="p large listen-color-theme max-width-540 mb-24 t_mb-20">Se você é <b>arquiteto, engenheiro civil ou designer de interiores,</b> e trabalha com renderização de projetos arquitetônicos e busca alcançar a alta performance em realismo dos grandes estúdios, esta biblioteca é para você.</p>
+            <span href="#" class="buttonoff stroke listen-color-theme mb-60 t_mb-40 w-button">Arquiteto . Engenheiro . Designer</span>
+            <link rel="prefetch" href="#"/>
+            <div class="flex justify-center t_justify-start">
+              <div id="maps-row" class="flex align-end justify-space-between sizing-fixed webkit-scrollbar-none">
+                <div id="maps-1" class="mr-40 t_mr-32 l_mr-16 l_sizing-fixed w-embed">
+                  <div class="home-maps-horizontal">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./img/bloc1-01.png"/>
+                      <source media="(max-width: 767px)" srcset="./img/bloc1-01mobile.png "/>
+                      <img src="./img/bloc1-01.png" alt/>
+                    </picture>
+                  </div>
+                </div>
+                <div id="maps-2" class=" position-relative pointer-events-none l_sizing-fixed w-embed">
+                  <div class="home-maps-horizontal">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./img/bloc1-02.png"/>
+                      <source media="(max-width: 767px)" srcset="./img/bloc1-02mobile.png"/>
+                      <img src="./img/bloc1-02.png" alt/>
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reveal">
+          <div class="container flex align-center justify-space-between l_direction-vertical l_align-start">
+            <div id="studio-desktop" class="position-relative mr-60 sizing-fixed t_mr-32 l_order-last">
+              <div class="w-embed">
+                <div class="youtubeplayer">
+                  <iframe class="youtubeline" src="https://www.youtube.com/embed/WH-AgG2ogfQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+              </div>
+            </div>
+            <div class="position-relative max-width-540 l_mb-32">
+              <h2 class="h _2 listen-color-theme mb-24 t_mb-16">Blocos High Poly configurados para V-Ray e Corona. Surpreenda</h2>
+              <p class="p large listen-color-theme mb-24 t_mb-20">Nossa Biblioteca é compatível com os melhores renderizadores e totalmente estruturada em categorias para você ganhar ainda mais performance.</p>
+                <div class="flex align-center t_direction-vertical t_align-start">
+                  <a href="https://photos.app.goo.gl/bpvw8H8kkhoG6WjT8" target="_blank" class="button stroke listen-color-theme w-button" style="margin-right: 2px; margin-top: 8px; width: 270px;">Ver catálogo de 3DSMax <span class="arrow">→</span></a>
+                  <a href="https://photos.app.goo.gl/N5XrSm9DCoKRxicQ7" target="_blank" class="button stroke listen-color-theme w-button" style="margin-left: 2px; margin-top: 8px; width: 270px;">Ver catálogo de SketchUp <span class="arrow">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reveal">
+          <div
+            class="container flex align-center justify-space-between l_direction-vertical l_align-start">
+            <div class="position-relative max-width-540 mr-60 t_mr-32 l_mb-32">
+              <h2 class="h _2 listen-color-theme mb-24 t_mb-16">Veja a diferença dos blocos High Poly</h2>
+              <p class="p large listen-color-theme mb-24 t_mb-20">Compare e veja a grande diferença de uma biblioteca com blocos High Poly e não seja como os 93% dos arquitetos que usam blocos comuns.</p>
+            </div>
+            <div class="position-relative sizing-fixed overflow-hidden border-radius-16px max-width-100">
+              <div class="position-relative overflow-hidden border-radius-16 w-embed">
+                <div id="data">
+                  <figure class="cd-image-container">
+                    <img src="./img/img-original.jpg" alt="Original Image">
+                    <span class="cd-image-label" data-type="original">High Poly</span>
+                    <div class="cd-resize-img"> <!-- the resizable image on top -->
+                      <img src="./img/img-modified.jpg" alt="Modified Image">
+                      <span class="cd-image-label" data-type="modified">Comum</span>
+                    </div>
+                    <span class="cd-handle"></span>
+                  </figure> <!-- cd-image-container -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reveal">
+          <div class="container">
+            <div class="container text-align-center mb-80">
+              <h2 class="h _2 listen-color-theme mb-16">Qualidade de blocos incomparável. Veja</h2>
+              <p class="p large listen-color-theme">Separadas por categorias, as bibliotecas são únicas em cada detalhe.<a href="#"><strong><br /></strong></a></p>
+              </div>
+            <div class="galery">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/galeria/01galeria.jpg"/>
+                  <source media="(max-width: 767px)" srcset="./img/galeria/01galeria.jpg"/>
+                  <img src="./img/galeria/01galeria.jpg" alt="" loading="lazy"/>
+                </picture>
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/galeria/02galeria.jpg"/>
+                  <source media="(max-width: 767px)" srcset="./img/galeria/02galeria.jpg"/>
+                  <img src="./img/galeria/02galeria.jpg" alt="" loading="lazy"/>
+                </picture>
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/galeria/03galeria.jpg"/>
+                  <source media="(max-width: 767px)" srcset="./img/galeria/03galeria.jpg"/>
+                  <img src="./img/galeria/03galeria.jpg" alt="" loading="lazy"/>
+                </picture>
+            </div>
+            <div class="galery">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/galeria/04galeria.jpg"/>
+                <source media="(max-width: 767px)" srcset="./img/galeria/04galeria.jpg"/>
+                <img src="./img/galeria/04galeria.jpg" alt="" loading="lazy"/>
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/galeria/05galeria.jpg"/>
+                <source media="(max-width: 767px)" srcset="./img/galeria/05galeria.jpg"/>
+                <img src="./img/galeria/05galeria.jpg" alt="" loading="lazy"/>
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/galeria/06galeria.jpg"/>
+                <source media="(max-width: 767px)" srcset="./img/galeria/06galeria.jpg"/>
+                <img src="./img/galeria/06galeria.jpg" alt="" loading="lazy"/>
+              </picture>
+          </div>
+          <div class="galery">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/galeria/07galeria.jpg"/>
+              <source media="(max-width: 767px)" srcset="./img/galeria/07galeria.jpg"/>
+              <img src="./img/galeria/07galeria.jpg" alt="" loading="lazy"/>
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/galeria/08galeria.jpg"/>
+              <source media="(max-width: 767px)" srcset="./img/galeria/08galeria.jpg"/>
+              <img src="./img/galeria/08galeria.jpg" alt="" loading="lazy"/>
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/galeria/09galeria.jpg"/>
+              <source media="(max-width: 767px)" srcset="./img/galeria/09galeria.jpg"/>
+              <img src="./img/galeria/09galeria.jpg" alt="" loading="lazy"/>
+            </picture>
+        </div>
+        <div class="galery">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/galeria/10galeria.jpg"/>
+            <source media="(max-width: 767px)" srcset="./img/galeria/10galeria.jpg"/>
+            <img src="./img/galeria/10galeria.jpg" alt="" loading="lazy"/>
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/galeria/11galeria.jpg"/>
+            <source media="(max-width: 767px)" srcset="./img/galeria/11galeria.jpg"/>
+            <img src="./img/galeria/11galeria.jpg" alt="" loading="lazy"/>
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/galeria/12galeria.jpg"/>
+            <source media="(max-width: 767px)" srcset="./img/galeria/12galeria.jpg"/>
+            <img src="./img/galeria/12galeria.jpg" alt="" loading="lazy"/>
+          </picture>
+      </div>
+      <div class="galery">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/galeria/19galeria.jpg"/>
+          <source media="(max-width: 767px)" srcset="./img/galeria/19galeria.jpg"/>
+          <img src="./img/galeria/19galeria.jpg" alt="" loading="lazy"/>
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/galeria/20galeria.jpg"/>
+          <source media="(max-width: 767px)" srcset="./img/galeria/20galeria.jpg"/>
+          <img src="./img/galeria/20galeria.jpg" alt="" loading="lazy"/>
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/galeria/21galeria.jpg"/>
+          <source media="(max-width: 767px)" srcset="./img/galeria/21galeria.jpg"/>
+          <img src="./img/galeria/21galeria.jpg" alt="" loading="lazy"/>
+        </picture>
+    </div>
+          </div>
+        </section>  
+        <section class="section">
+          <div class="container">
+              <div class="u_cnt_wrapper mb-80 text-align-center">
+                <h2 class="h _2 listen-color-theme mb-16">Estes diferenciais vão transformar tudo</h2>
+                <p class="p large listen-color-theme">Seu crescimento profissional é garantido com todo este conteúdo.</p>
+              </div>
+              <div class="u_cnt_wrapper">
+                <div class="w-layout-grid u_grid _4 mb64">
+                  <div class="mini-card center-top">
+                      <img src="./img/svg/01vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">A única com + 30 mil blocos High Poly</h4>
+                      <p class="p dark-mode">São + de 30 mil blocos com milhares de polígonos e de alta performance.</p>
+                  </div>
+                  <div class="mini-card center-top">
+                      <img src="./img/svg/02vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">+86% de velocidade em seus projetos</h4>
+                  <p class="p dark-mode">Conteúdo organizado e totalmente leve para você trabalhar.</p>
+                </div>
+                  <div class="mini-card center-top">
+                      <img src="./img/svg/03vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Blocos configurados para V-Ray e Corona</h4>
+                      <p class="p dark-mode">Use o seu renderizador preferido para chegar no máximo realismo.</p>
+                    </div>
+                    <div class="mini-card center-top">
+                      <img src="./img/svg/04vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Blocos compatíveis com todas as versões</h4>
+                      <p class="p dark-mode">Blocos projetados para alta performance em todas as versões.</p>
+                    </div>
+                    <div class="mini-card center-top">
+                      <img src="./img/svg/05vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Blocos mapeados e texturizados</h4>
+                      <p class="p dark-mode">Prontos para você colocar seu projeto para renderizar.</p>  
+                    </div>
+                    <div class="mini-card center-top">
+                      <img src="./img/svg/06vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Coleção de HDRI/IES</h4>
+                      <p class="p dark-mode">Com essa coleção você vai finalmente ter a sonhada iluminação nos ambientes.</p>  
+                    </div>
+                    <div class="mini-card center-top">
+                      <img src="./img/svg/07vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Conteúdo atualizado</h4>
+                      <p class="p dark-mode">Conteúdo sempre atualizado de acordo com tendências do mercado.</p>  
+                     </div>
+                     <div class="mini-card center-top">
+                      <img src="./img/svg/08vant.svg" alt="" class="feature-block-icon">
+                      <h4 class="h _4 listen-color-theme mb-16">Suporte totalmente exclusivo</h4>
+                      <p class="p dark-mode">Estamos prontos para solucionar todas as suas dúvidas.</p>  
+                     </div>
+                  </div>
+                </div>
+          </div>  
+        </section>
+        <section class="section">
+          <div class="container">
+              <div class="u_cnt_wrapper mb-80 text-align-center">
+                <h2 class="h _2 listen-color-theme mb-16">Ganhe todos estes bônus gratuitamente</h2>
+                <p class="p large listen-color-theme">Com estes bônus você vai ficar na frente de todos os concorrentes.</p>
+              </div>
+              <div class="u_cnt_wrapper">
+                <div class="w-layout-grid u_grid _4 mb64">
+                  <div class="mini-card center-top pulse">
+                      <img src="./img/svg/01bon.svg" alt="" class="feature-block-icon">
+                      <h4 class="h4 mb10">Mentoria Exclusiva</h4>
+                      <p class="p dark-mode">Você terá verdadeiras aulas ministradas por profissionais expert em realimos.</p>
+                      <h4 class="h4 mb10"><span class="text-gray"><s>R$3240</s></span> <span class="text-blue">GRÁTIS</span></h4>
+                  </div>
+                  <div class="mini-card center-top pulse">
+                      <img src="./img/svg/02bon.svg" alt="" class="feature-block-icon">
+                      <h4 class="h1 mb10">Plugins Essenciais</h4>
+                  <p class="p dark-mode">São dezenas de plugins exclusivos que vão solucionar qualquer complexidade dos projetos.</p>
+                  <h4 class="h4 mb10"><span class="text-gray"><s>R$1200</s></span> <span class="text-blue">GRÁTIS</span></h4>
+                </div>
+                  <div class="mini-card center-top pulse">
+                      <img src="./img/svg/03bon.svg" alt="" class="feature-block-icon">
+                      <h4 class="h4 mb10">Texturas Nacionais</h4>
+                      <p class="p dark-mode">Uma coleção inédita com texturas usadas nas principais indústrias do mercado brasileiro.</p>
+                      <h4 class="h4 mb10"><span class="text-gray"><s>R$197</s></span> <span class="text-blue">GRÁTIS</span></h4>
+                    </div>
+                  <div class="mini-card center-top pulse">
+                      <img src="./img/svg/04bon.svg" alt="" class="feature-block-icon">
+                      <h4 class="h4 mb10">Coleção de Plantas Humanizadas</h4>
+                      <p class="p dark-mode">Milhares de modelos renderizados no V-Ray para você colocar na sua planta.</p>
+                      <h4 class="h4 mb10"><span class="text-gray"><s>R$197</s></span> <span class="text-blue">GRÁTIS</span></h4>
+                  </div>
+                </div>
+              </div>
+          </div>  
+        </section>
+        <section class="section">
+          <div class="container">
+              <div class="u_cnt_wrapper mb-80 text-align-center">
+                <h2 class="h _2 listen-color-theme mb-16">Depoimento e experiências</h2>
+                <p class="p large listen-color-theme">Veja o testemunho de quem já faz parte da comunidade Total3D.</p>
+              </div>
+              <div class="u_cnt_wrapper">
+                <div class="w-layout-grid u_grid _3 mb64">
+                  <div class="mini-cardimg center-top">
+                    <div class="img-minicard">
+                        <video width="100%" height="auto" controls="true" style="background-image: url('./img/depoimento/dep01tumb.jpg'); background-size: 100%; height:auto;" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                          <source src="./img/depoimento/dep01.mp4" data-wf-ignore="true"/>
+                          <source src="./img/depoimento/dep01.webm" data-wf-ignore="true"/>
+                        </video>
+                      </div>
+                      <div class="mini-card center-top">
+                      <h4 class="h4 mb10">Stefânia Maia</h4>
+                      <h2 class="title mb-16 listen-color-theme">Designer de Interiores</h2>
+                      <p class="p dark-mode"><b>Estou muito satisfeita!</b> com os Blocos de SketchUp High Poly e principalmente pelas aulas da mentoria.</p>
+                      <h4 class="h4 title text-normal mb10">&#9733&#9733&#9733&#9733&#9733</h4>
+                    </div> 
+                  </div>
+                  <div class="mini-cardimg center-top">
+                    <div class="img-minicard">
+                      <video width="100%" height="auto" controls="true" style="background-image: url('./img/depoimento/dep02tumb.jpg'); background-size: 100%; height:auto;" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                        <source src="./img/depoimento/dep02.mp4" data-wf-ignore="true"/>
+                        <source src="./img/depoimento/dep02.webm" data-wf-ignore="true"/>
+                      </video>
+                      </div>
+                      <div class="mini-card center-top">
+                      <h4 class="h4 mb10">Allan Kerven</h4>
+                      <h2 class="title mb-16 listen-color-theme">Arquiteto</h2>
+                      <p class="p dark-mode"><b>Escolha correta.</b> Utilizo o 3DSMax e agora não perco mais nenhum segundo procurando blocos na internet.</p>
+                      <h4 class="h4 title text-normal mb10">&#9733&#9733&#9733&#9733&#9733</h4>
+                    </div> 
+                  </div> <div class="mini-cardimg center-top">
+                    <div class="img-minicard">
+                      <video width="100%" height="auto" controls="true" style="background-image: url('./img/depoimento/dep03tumb.jpg'); background-size: 100%; height:auto;" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                        <source src="./img/depoimento/dep03.mp4" data-wf-ignore="true"/>
+                        <source src="./img/depoimento/dep03.webm" data-wf-ignore="true"/>
+                      </video>                      </div>
+                      <div class="mini-card center-top">
+                      <h4 class="h4 mb10">Marcos Moura</h4>
+                      <h2 class="title mb-16 listen-color-theme">Designer 3D</h2>
+                      <p class="p dark-mode"><b>Recomendo Demais.</b> Além do melhor suporte, os blocos já vem configurados para Vray. Parabéns Total3D.</p>
+                      <h4 class="h4 title text-normal mb10">&#9733&#9733&#9733&#9733&#9733</h4>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+          </div>  
+        </section>
+        <section class="section reveal">
+          <div class=" container flex align-center justify-space-between l_direction-vertical l_align-start">
+            <div class="position-relative mr-60 flex sizing-fixed justify-end t_mr-32 l_order-last l_mr-0">
+              <div id="vision" class="sizing-fixed flex justify-end w-embed">
+                <div id="vision-visual" class="sizing-fixed">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/selogarantia.png"/>
+                    <source media="(max-width: 767px)" srcset="./img/selogarantiamobile.png"/>
+                    <img src="./img/selogarantia.png" alt="" loading="lazy"/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="position-relative max-width-540 l_mb-32">
+              <h2 class="h _2 listen-color-theme mb-24 t_mb-16">Resultado garantido ou seu dinheiro de volta</h2>
+              <p class="p large listen-color-theme mb-24 t_mb-20">Se por algum motivo não ficar satisfeito com a nossa biblioteca, devolvemos 100% do dinheiro investido. Somos uma empresa amiga do consumidor.</p>
+            </div>
+          </div>
+        </section>
+        <section id="buynow" class="section reveal">
+          <div class="container">
+              <div class="u_cnt_wrapper mb-80 text-align-center">
+                <h2 class="h _2 listen-color-theme mb-16">Preços e planos</h2>
+                <p class="p large listen-color-theme">Garanta agora a galeria que vai definitivamente transformar sua carreira. </p>
+              </div>
+              <div class="u_cnt_wrapper">
+                <div class="w-layout-grid u_grid _5 mb64">
+                  <div class="mini-card center-left">
+                    <h4 class="h _3 color-white text-align-left">PackTotal <span class="text-blue">3DSMax</span><br>+ Aulas Personalizadas</h4>
+                    <div>
+                      <p class="p text-align-left"><b>Acesso Vitalício</b></p>
+                      <p class="p text-align-left"><b>Acesso Imediato</b></p>
+                      <p class="p text-align-left"><b>30 Mil Blocos 3DSMax High Poly</b></p>
+                      <p class="p text-align-left"><b>Pagamento Único</b></p>
+                      <p class="p text-align-left">Mentoria Exclusiva <span class="text-blue">- Bônus</span></p>
+                      <p class="p text-align-left">Plugins Essenciais <span class="text-blue">- Bônus</span></p>
+                      <p class="p text-align-left">Planta Humanizada <span class="text-blue">- Bônus</span></p>
+                      <p class="p text-align-left">Texturas Nacionais <span class="text-blue">- Bônus</span></p>
+                      <p class="p text-align-left">Comunidade Fechada</p>
+                      <p class="p text-align-left">Suporte Preferêncial</p>
+                    </div>
+                    <div class="price">
+                      <h4 class="h _3 text-align-left"><span class="text-gray"><s>R$759</s></span> <span class="text-blue">R$297</span> <span class="text-blue">OFF</span><p class="p small dark-mode">PARCELE EM ATÉ 6X SEM JUROS</p></h4>
+                      <a id="bot1" href="https://total3d.pay.yampi.com.br/r/LRN5UC8V7D" class="button w-button pulse">Comprar Agora</a>
+                    </div>
+                  </div>
+                  <div class="mini-card center-left">
+                    <h4 class="h _3 color-white text-align-left">PackTotal <span class="text-purple">SketchUp</span><br>+ Aulas Personalizadas</h4>
+                    <div>
+                      <p class="p text-align-left"><b>Acesso Vitalício</b></p>
+                      <p class="p text-align-left"><b>Acesso Imediato</b></p>
+                      <p class="p text-align-left"><b>30 Mil Blocos SketchUp High Poly</b></p>
+                      <p class="p text-align-left"><b>Pagamento Único</b></p>
+                      <p class="p text-align-left">Mentoria Exclusiva <span class="text-purple">- Bônus</span></p>
+                      <p class="p text-align-left">Plugins Essenciais <span class="text-purple">- Bônus</span></p>
+                      <p class="p text-align-left">Planta Humanizada <span class="text-purple">- Bônus</span></p>
+                      <p class="p text-align-left">Texturas Nacionais <span class="text-purple">- Bônus</span></p>
+                      <p class="p text-align-left">Comunidade Fechada</p>
+                      <p class="p text-align-left">Suporte Preferêncial</p>
+                    </div>
+                    <div class="price">
+                    <h4 class="h _3 text-align-left"><span class="text-gray"><s>R$759</s></span> <span class="text-purple">R$297</span> <span class="text-purple">OFF</span><p class="p small dark-mode">PARCELE EM ATÉ 6X SEM JUROS</p></h4>
+                    <a id="bot2" href="https://total3d.pay.yampi.com.br/r/9OK8B2NY02" class="button btnpurple w-button pulse">Comprar Agora</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>  
+        </section>
+        <section class="u_sctn wf-section reveal">
+          <div class="container">
+             <div class="h _2 listen-color-theme mb-16">
+                <h2 class="h _2 listen-color-theme mb-24 mb-100 text-align-center">Eventuais dúvidas</h2>
+             </div>
+             <div class="faq-content">
+                <div class="faq-question">    
+                   <input id="q1" type="checkbox" class="panel">
+                   <div class="panel-flex">
+                      <label for="q1" class="panel-title">Minha compra é segura?<div class="plus">+</div></label>
+                   </div>
+                   <div class="p panel-content">Na Total3D, seus dados são protegidos de ponta a ponta. Utiliza-se de criptografia avançada para garantir sua navegação e compra com máxima confiabilidade.</div>
+                </div>
+                <div class="faq-question">
+                   <input id="q2" type="checkbox" class="panel">
+                   <div class="panel-flex">
+                      <label for="q2" class="panel-title">Ela é configurada para V-Ray ou Corona?<div class="plus">+</div></label>
+                   </div>
+                   <div class="p panel-content">Sim. Além de ser a única High Poly a Total3D te entrega blocos configurados para você economizar tempo e automaticamente focar no crescimento do seu negócio. Está esperando o que? Garanta agora a biblioteca nº 1 nos Estados Unidos e agora no Brasil.</div>
+                </div>
+                <div class="faq-question">
+                   <input id="q3" type="checkbox" class="panel">
+                   <div class="panel-flex">
+                      <label for="q3" class="panel-title">O conteúdo é totalmente organizado?<div class="plus">+</div></label>
+                   </div>
+                   <div class="p panel-content">A prioridade da Total3D é aumentar sua performance, por isso o conteúdo é extremamente organizado por sessões, categorias e através das pré-visualizações você escolhe somente o deseja.</div>
+                </div>
+                <div class="faq-question">
+                   <input id="q4" type="checkbox" class="panel">
+                   <div class="panel-flex">
+                      <label for="q4" class="panel-title">Estou começando agora, posso comprar?<div class="plus">+</div></label>
+                   </div>
+                   <div class="p panel-content">Claro. Com o mercado cada dia mais competitivo, quem sai na frente garante melhores resultados. Aproveite essa oportunidade e garanta seu acesso a biblioteca exclusiva.</div>
+                </div>
+             </div>
+             <div class="faq-question">
+                <input id="q5" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q5" class="panel-title">Posso pedir reembolso?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Claro. A Total3D é empresa amiga do consumidor, portanto segue todas as normas e leis estabelecidas no código do consumidor. Se por algum motivo não ficar satisfeito, você pode solicitar 100% do dinheiro investido de volta em até 7 dias após a compra.</div>
+             </div>
+             <div class="faq-question">
+                <input id="q6" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q6" class="panel-title">Quais formas de pagamento?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Seja um boleto bancário, cartão de crédito e até o Pix. A Total3D quer te ajudar a economizar tempo para alcançar o máximo realismo.</div>
+             </div>
+             <div class="faq-question">
+                <input id="q7" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q7" class="panel-title">Posso parcelar minha compra?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Você pode parcelar de acordo com sua necessidade. Ah, e com zero de juros. Transforme agora seus projetos com blocos exclusivos.</div>
+             </div>
+             <div class="faq-question">
+                <input id="q8" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q8" class="panel-title">O pagamento é unico?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Sim, o pagamento é único com direito a mentoria grátis. Garanta agora seu acesso.</div>
+             </div>
+             <div class="faq-question">
+                <input id="q9" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q9" class="panel-title">Posso comprar com um amigo e dividir o acesso?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Temos uma condição especial para o compartilhamento de acessos. Converse com consultor clicando no botão do WhatsApp.</div>
+             </div>
+             <div class="faq-question">
+                <input id="q10" type="checkbox" class="panel">
+                <div class="panel-flex">
+                   <label for="q10" class="panel-title">Preciso enviar o comprovante?<div class="plus">+</div></label>
+                </div>
+                <div class="p panel-content">Não. Após a aprovação do pagamento será liberado imediatamente seu acesso a biblioteca.</div>
+             </div>
+          </div>
+       </section>
+        <section class="section reveal">
+          <div class="container">
+            <div class="cta-banner">
+              <h2 class="h _2 listen-color-theme mb-16">Se ainda resta dúvida, receba amostra grátis.</h2>
+              <p class="p large listen-color-theme mb-24 max-width-856">Veja gratuitamente a qualidade da nossa galeria. Solicite agora ou garanta seu acesso com garantia total de satisfação.<a href="#"><strong><br /></strong></a></p>
+              <div id="cta-buttons-grid" class="w-layout-grid grid _1-row l_1-col"> 
+                <a href="http://www.bit.ly/total3dgratis" class="button">Solicitar Agora</a>
+                <a href="#buynow" class="button stroke listen-color-theme w-button" >Comprar Agora</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer data-w-id="c6d1213b-7391-de97-08a5-cd5f37e5b6a8" class="footer">
+        <div id="top" class="top-anchor"></div>
+        <div class="container flex align-start justify-space-between children-wrap">
+          <a id="footer-logo" href="/" aria-current="page" class="nav-logo-link mr-160 t_mr-90 t_mb-40 w-inline-block w--current">
+            <div class="flex w-embed">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="max-width: 146px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 136 28" xmlns:v="https://vecta.io/nano">
+                <path d="M16.56,0H6.73V6.72H0v9.84A6.66,6.66,0,0,0,6.64,23.2h9.84V16.48H23.2V6.64A6.66,6.66,0,0,0,16.56,0Zm-.11,16.45H6.75V6.75h9.7ZM102.9,15.2a.84.84,0,0,0-.83-.84H101V17h.42V16h.5l.73,1h.51l-.77-1A.82.82,0,0,0,102.9,15.2Zm-.9.45h-.61v-.88H102c.31,0,.49.16.49.44A.43.43,0,0,1,102,15.65Zm-.07-3.59h0a3.64,3.64,0,1,0,3.65,3.64A3.64,3.64,0,0,0,101.9,12.06Zm.07,6.73-.1,0a3.11,3.11,0,1,1,3.1-3.13A3.05,3.05,0,0,1,102,18.79Zm-62.07-13H29.1V8.09h4.15v11h2.51v-11h4.17Zm4.5,3.14h-.1a5,5,0,0,0-3.53,1.49,5.11,5.11,0,0,0-1.51,3.69,5.17,5.17,0,0,0,1.52,3.73,4.9,4.9,0,0,0,3.5,1.48h.1a5,5,0,0,0,3.66-1.51,5.17,5.17,0,0,0,1.52-3.69,5,5,0,0,0-1.49-3.66A5.12,5.12,0,0,0,44.43,8.88ZM47,14.11a2.63,2.63,0,0,1-2.47,2.8h-.1v0a2.62,2.62,0,0,1-2.6-2.62v-.18a2.62,2.62,0,0,1,2.39-2.83h.2A2.68,2.68,0,0,1,47,14Zm7.47,1.22h0v-4h2.76V9.11H54.47V6.56H52V9.11H50.42v2.18H52v4.28c0,2.44,1.32,3.72,3.82,3.72a7,7,0,0,0,1.76-.23V16.89c-.63.06-1,.08-1.19.08C55,17,54.47,16.48,54.47,15.33ZM90,5.72H85.68V19.05h4.18a7,7,0,0,0,5.14-2,6.42,6.42,0,0,0,1.86-4.71,6.23,6.23,0,0,0-1.79-4.62A7.07,7.07,0,0,0,90,5.72Zm.37,11h0a3.84,3.84,0,0,1-.48,0l0,0H88.19V8.09h1.65c2.73,0,4.43,1.63,4.43,4.27A4.15,4.15,0,0,1,90.32,16.7ZM70,19.05h2.52V3.91H70ZM80.33,10.7v0h-.09l2.91-4.25V5.74H75V8.09h4.39l-2.78,4v.62h1.56c1.76,0,2.73.72,2.73,2a2.13,2.13,0,0,1-2.1,2.16h-.23A3.26,3.26,0,0,1,75.75,15L74,16.33a5,5,0,0,0,4.63,3A4.59,4.59,0,0,0,83.45,15v-.21a3.92,3.92,0,0,0-.89-2.62A4.33,4.33,0,0,0,80.33,10.7ZM63.39,8.88h0a5.2,5.2,0,0,0-4.16,2l1.29,1.58a3.31,3.31,0,0,1,2.57-1.35,1.7,1.7,0,0,1,2,1.39v0A2,2,0,0,1,65,13v.51H62.46c-2.22,0-3.6,1.1-3.6,2.87s1.32,2.94,3.29,2.94a3.91,3.91,0,0,0,2.92-1.2l.12-.13v1.09h2.29V13.13C67.48,10.47,66,8.88,63.39,8.88ZM65,15.35a2,2,0,0,1-1.93,2.07h-.18c-.9,0-1.47-.46-1.47-1.17s.51-1.09,1.43-1.09H65Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="visually-hidden">Home page</div></a>
+          <div id="footer-nav" class="flex justify-space-between mb-64 sizing-grow children-wrap l_sizing-fixed l_width-100">
+            <div class="mr-60 mb-36 m_mr-32">
+              <h3 class="title listen-color-theme mb-20">POLÍTICA</h3>
+              <ul role="list" class="flex direction-vertical align-start w-list-unstyled">
+                <li>
+                  <a href="#" class="footer-link" >Termos de uso</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mr-60 m_mr-32">
+              <h3 class="title listen-color-theme mb-20">SEGURANÇA</h3>
+              <ul role="list" class="flex direction-vertical align-start w-list-unstyled">
+                <li>
+                  <a href="#" class="footer-link">Privacidade</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="title listen-color-theme mb-20">AFIALIADOS</h3>
+              <ul role="list" class="flex direction-vertical align-start w-list-unstyled">
+                <li>
+                  <a href="https://bit.ly/total3dafiliado" class="footer-link">Seja afiliado</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex align-center justify-space-between width-100 children-wrap l_justify-center">
+            <div class="flex align-center children-wrap l_order-last">
+              <div id="mapbox-footer-text" class="p small listen-color-theme mr-20">© Total3D</div>
+              <a href="#" class="footer-link mr-24 mb-0">Termos de uso</a>
+              <a href="#" class="footer-link mr-24 mb-0">Política de privacidade</a>
+              <a class="footer-link bottom-link mb-0">CNPJ: 32.467.323/0001-86</a>
+            </div>
+            <div class="flex align-center l_mb-32 l_width-100 justify-space-between"> 
+                <div class="visually-hidden">Visite nosso Linkedinr</div></a>
+                <a href="https://www.instagram.com/Total3D" class="social-link mr-16 w-inline-block">
+                <div class="flex w-embed">
+                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.68801 6.31665H0.633606V23.9998H5.68801V6.31665Z" fill="currentColor"/>
+                    <path d="M17.6832 6.31665C14.16 6.31665 13.5504 7.60305 13.2624 8.84145V6.31665H8.21277V23.9998H13.2624V13.8959C13.2624 12.2591 14.1504 11.3711 15.7872 11.3711C17.424 11.3711 18.312 12.2399 18.312 13.8959V23.9998H23.3664V15.1582C23.3664 10.1039 22.7088 6.31665 17.6832 6.31665Z" fill="currentColor"/>
+                    <path d="M3.15841 5.0496C4.55281 5.0496 5.68321 3.91921 5.68321 2.5248C5.68321 1.13039 4.55281 0 3.15841 0C1.764 0 0.633606 1.13039 0.633606 2.5248C0.633606 3.91921 1.764 5.0496 3.15841 5.0496Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="visually-hidden">Visite nosso Facebook</div></a>
+                <a href="https://www.facebook.com/Total3DBR" class="social-link mr-16 w-inline-block">
+                <div class="flex w-embed">
+                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path d="M13.8576 23.9999V13.0511H17.5296L18.0816 8.78391H13.8576V6.06231C13.8576 4.82871 14.1984 3.98391 15.9744 3.98391H18.24V0.143913C17.1442 0.0366489 16.0434 -0.011421 14.9424 -8.69234e-05C11.6832 -8.69234e-05 9.45121 1.98711 9.45121 5.63991V8.78391H5.76001V13.0511H9.44641V23.9999H13.8576Z" fill="currentColor"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="visually-hidden">Visite a Total3D no Facebook</div></a>
+                <a href="https://www.instagram.com/Total3D" class="social-link w-inline-block" ><div class="flex w-embed">
+                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172008 16.953 0.0789456C15.2959 -0.0141173 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141173 7.04652 0.0789456C5.12526 0.172008 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="visually-hidden">Visit a Total3D no Instagra</div>
+            </a>
+            </div>
+          </div>
+        </div>
+        <a href="#top" class="back-to-top flex align-center justify-center w-inline-block"><div class="w-embed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" fill="none" xmlns:v="https://vecta.io/nano">
+              <path d="M17 9L9 1 1 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></div></a>
+      </footer>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=5531996865267&text=Oi.%20Tenho%20uma%20d%C3%BAvida%20e%20preciso%20de%20atendimento.%20" class="float pulse" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+
+      </div>
+      <div class="page-js">
+        <div class="slider-js w-embed w-script">
+          <!-- Materialize Slider JS 
+ * Works only for the first carousel on the page * 
+-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // Setting Up The Hero Slider
+              var elems = document.querySelector(".carousel");
+              var instance = M.Carousel.init(elems, {
+                numVisible: 3,
+              });
+
+              // Next-Prev Slide
+              var prevSlide = function () {
+                instance.prev();
+              };
+              var nextSlide = function () {
+                instance.next();
+              };
+              document
+                .querySelector("#prev")
+                .addEventListener("click", prevSlide);
+              document
+                .querySelector("#next")
+                .addEventListener("click", nextSlide);
+
+              /*
+               *  Slider Accessibility
+               */
+              var stopSlides = false;
+
+              // Auto rotation of slides
+              var sliderInterval = setTimeout(function tick() {
+                sliderInterval = setTimeout(tick, 5500);
+                if (!stopSlides) {
+                  nextSlide();
+                }
+              }, 4000);
+
+              // Set a needed slide on Tab focus
+              var focusSlides = document.querySelectorAll(".slider-focus");
+              for (var i = 0, len = focusSlides.length; i < len; i++) {
+                (function (index) {
+                  focusSlides[i].addEventListener("blur", function () {
+                    stopSlides = false;
+                  });
+
+                  focusSlides[i].addEventListener("focus", function () {
+                    stopSlides = true;
+                    if (index == i) {
+                      // Dealing with the focus after the slides
+                      instance.set(focusSlides.length - 1);
+                    } else if (index > 1) {
+                      // Focus for slides
+                      instance.set(index - 1);
+                    } else {
+                      instance.set(0); // Dealing with the focus before the slides
+                    }
+                  });
+                })(i);
+              }
+
+              document
+                .querySelector(".carousel")
+                .addEventListener("mousedown", () => {
+                  stopSlides = true;
+                });
+              document
+                .querySelector(".carousel")
+                .addEventListener("mouseleave", () => {
+                  stopSlides = false;
+                });
+              document
+                .querySelector(".carousel-nav")
+                .addEventListener("mousedown", () => {
+                  stopSlides = true;
+                });
+              document
+                .querySelector(".carousel-nav")
+                .addEventListener("mouseleave", () => {
+                  stopSlides = false;
+                });
+
+              (function () {
+                var throttle = function (type, name, obj) {
+                  obj = obj || window;
+                  var running = false;
+                  var func = function () {
+                    if (running) {
+                      return;
+                    }
+                    running = true;
+                    requestAnimationFrame(function () {
+                      obj.dispatchEvent(new CustomEvent(name));
+                      running = false;
+                    });
+                  };
+                  obj.addEventListener(type, func);
+                };
+
+                throttle("resize", "reinitCarousel");
+              })();
+
+              var windowWidth = window.innerWidth;
+              window.addEventListener("reinitCarousel", function () {
+                if (windowWidth !== window.innerWidth) {
+                  windowWidth = window.innerWidth;
+                  window.location.reload();
+                }
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./js/total3dgloba.js" type="text/javascript"></script>
+    <!--[if lte IE 9
+      ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script
+    ><![endif]-->
+    
+
+    <!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      items: 4,
+      center: false,
+      margin: 0,
+      loop: false,
+      autoplay: false,
+      slideTransition: 'ease',
+      autoplayHoverPause: false,
+      smartSpeed: 500,
+      autoWidth: true,
+      nav: true,
+      responsive:{
+        0:{
+          items:1
+        },
+        580:{
+          items:1
+        },
+        768:{
+          items:2
+        },
+        992:{
+          items:3
+        }
+      }
+    });
+  });
+  let heroCenter = document.querySelector('.hero-center');
+  $(document).ready(function () {
+    $(".hero-center").children().each(function() {
+      heroCenter.innerHTML = heroCenter.innerHTML.replace(/\u2028/g, ' ');
+    });
+  });
+</script>
+
+<!-- F'in sweet CMS Library for Webflow
+<script src="https://cdn.finsweet.com/files/cmslibrary-v1.7.js"></script>
+
+<script>
+// immediately/self invoked function. This function executes right away
+(function() {
+// create a new Library instance and store it in a variable called "fsSlider"
+var fsSlider = new FsLibrary('.hidden-feed')  // Class of your hidden CMS collection list
+
+// run slider on our instance
+fsSlider.slider({
+sliderComponent: '.dev-slider'  // Webflow slider component
+})
+})();
+</script> -->
+<script type="text/javascript">
+   // Script para revelar conteúdo
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+
+    for(var i = 0; i < reveals.length; i++){
+
+      var windowheight = window.innerHeight;
+      var revealtop = reveals[i].getBoundingClientRect().top;
+      var revealpoint = 150;
+
+      if(revealtop < windowheight - revealpoint){
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+</script>
+  
+</body>
+</html>
